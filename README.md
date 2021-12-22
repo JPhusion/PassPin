@@ -53,3 +53,14 @@ sudo pip3 install requirements.txt
 6. Run main.py
 
 ##### *Installers/packages are not yet supported. Feel free to contact me if you have any questions or have a method to package this software for cross platform.
+
+## Setup
+- When the software is first run, you will be promted to enter the master password. The default password is `Password1`
+
+- Enter this password to get started.
+
+- You will be prompted to enter an email. This email will be used to send verification codes to when updating security settings.
+
+- You should immediately change the master password to a secure password (reccommend minimum length of 12 with capital letters, lowercase letters, numbers, and special characters).
+
+- Enter your accounts!
