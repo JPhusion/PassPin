@@ -1,21 +1,26 @@
-import smtplib
+import csv
 import ssl
+import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 def email_pwrs(code):
+    reader = csv.DictReader(open("./data/email.csv"))
+    for raw in reader:
+        email = raw.get('EMAIL')
+    
+    receiver_email = email
     sender_email = "jfusion3601@gmail.com"
-    receiver_email = "joshua.hy.chans@gmail.com"
     password = "jfusion122404"
 
     message = MIMEMultipart("alternative")
-    message["Subject"] = "Master Password Change"
+    message["Subject"] = "PassPin: Verification for Security Update"
     message["From"] = sender_email
     message["To"] = receiver_email
 
     # Create the plain-text and HTML version of your message
     text = f"""\
-    Josh,
+    Dear PassPin user,
 
     A master password reset has been requested. If you did not request this change, delete this email immediately.
 
@@ -30,7 +35,7 @@ def email_pwrs(code):
 
     Regards,
 
-    Security Detail
+    The PassPin Security Team
     """
     html = f"""\
     <p>&nbsp;</p>
