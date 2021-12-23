@@ -43,12 +43,12 @@ PassPin is a secure password manager that utilises AES256 encryption and SHA256 
 5. Enter the following command:
 ```
 # Windows:
-pip install requirements.txt
+pip install -r requirements.txt
 
 # Mac/Linux
-pip3 install requirements.txt
+pip3 install -r requirements.txt
 # or
-sudo pip3 install requirements.txt
+sudo pip3 install -r requirements.txt
 ```
 6. Run main.py
 
