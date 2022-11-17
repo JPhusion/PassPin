@@ -11,7 +11,7 @@ def email_pwrs(code):
     
     receiver_email = email
     sender_email = "jfusion3601@gmail.com"
-    password = "jfusion122404"
+    password = "ftpmfuokxgjcnupx"
 
     message = MIMEMultipart("alternative")
     message["Subject"] = "PassPin: Verification for Security Update"

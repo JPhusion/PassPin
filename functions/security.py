@@ -18,7 +18,7 @@ def security(database, key, master_password):
             print("\n")
             print("Select an action from the list below:\n\n1. Change master password\n2. Change encryption key\n3. Re-encrypt all passwords\n4. Change verification email\n5. Cancel and return to main menu")
             selection = int(input("\n: "))
-            if 1 <= selection <= 4:
+            if 1 <= selection <= 5:
                 break
             print(term.red(
                 "  Error: Invalid input. Please input the number which corresponds to your desired action. Press [ENTER] to continue."))
