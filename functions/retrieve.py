@@ -75,20 +75,20 @@ def retrieve(database):
         print(term.clear)
         print(term.white_on_slategray(term.center('')))
         print(term.white_on_slategray(term.center(
-            f'PASSPIN PASSWORD MANAGER - {str(plat_list[counter]).upper()} ACCOUNTS')))
+            f'PASSPIN PASSWORD MANAGER - {str(plat_list[selection]).upper()} ACCOUNTS')))
         print(term.white_on_slategray(term.center('')))
         print("\n")
         print("Select an account from the list below:")
         print(x)
-        selection = input(": ")
-        if selection in database[plat_list[counter]]:
+        acc_selection = input(": ")
+        if acc_selection in database[plat_list[selection]]:
             break
         print(term.red(
             "  Error: Invalid input. Please input the number which corresponds to your desired action. Press [ENTER] to continue."))
         getpass("  ")
     
-    encrypted_password = database[plat_list[counter]][selection]["password"]
-    password = decrypt(generateKey(database[plat_list[counter]][selection]["decryptkey"]), bytes(encrypted_password, 'utf-8'))
+    encrypted_password = database[plat_list[selection]][acc_selection]["password"]
+    password = decrypt(generateKey(database[plat_list[selection]][acc_selection]["decryptkey"]), bytes(encrypted_password, 'utf-8'))
     pyperclip.copy(password)
     print(f"\nPassword has been copied to your clipboard.")
     getpass("\n\nPress [ENTER] to return to main menu.")

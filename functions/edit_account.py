@@ -162,8 +162,9 @@ def editAccount(database, key):
         if action == "1":
             edit()
         elif action == "2":
-            if input("\nConfirm account creation cancellation? (y/n):\n: ") == "y":
+            if input("\nConfirm account edit cancellation? (y/n):\n: ") == "y":
                 database = copy.deepcopy(old_database)
+                return
         elif action == "3":
             database = encrypt(encryption_key, str(database)).decode('utf-8')
             with open("./data/database.txt", "r+") as f:

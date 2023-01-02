@@ -1,3 +1,5 @@
+#!/opt/homebrew/Caskroom/miniconda/base/bin/python
+
 import re
 import csv
 import json
@@ -117,6 +119,5 @@ while True:
             password_generator()
         elif selection == 6:
             security(database, key, master_password)
-            break
         elif selection == 7:
             exit()
